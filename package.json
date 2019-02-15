@@ -21,7 +21,8 @@
     "mongoose": "^5.4.11",
     "morgan": "^1.9.1",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "request-promise": "^4.2.4",
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -35,7 +36,6 @@
     "chai-http": "^4.2.1",
     "cross-env": "^5.2.0",
     "mocha": "^5.2.0",
-    "mongodb-memory-server": "^3.0.0",
-    "nodemon": "^1.18.10"
+    "mongodb-memory-server": "^3.0.0"
   }
 }
