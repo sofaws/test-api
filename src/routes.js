@@ -1,15 +1,15 @@
 import CommonsModule from "./modules/common";
-import ProductModule from "./modules/products";
+import PromoCodeModule from "./modules/promocodes";
 
 
 export const PREFIXS_ROUTE_NAME = {
     BASE: '/',
-    PRODUCTS: '/products'
+    PROMOCODES: '/promocodes',
 };
 
 export const ROUTES_MODULES = [
     { prefix: PREFIXS_ROUTE_NAME.BASE, target: CommonsModule.Routes},
-    { prefix: PREFIXS_ROUTE_NAME.PRODUCTS, target: ProductModule.Routes},
+    { prefix: PREFIXS_ROUTE_NAME.PROMOCODES, target: PromoCodeModule.Routes},
 ];
 
 
