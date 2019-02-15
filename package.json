@@ -11,6 +11,7 @@
   },
   "author": "Maxime CHABERT",
   "dependencies": {
+    "@babel/runtime": "^7.3.1",
     "async-af": "^7.0.8",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
@@ -20,9 +21,9 @@
     "lodash": "^4.17.11",
     "mongoose": "^5.4.11",
     "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "nodemon": "^1.18.10"
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
