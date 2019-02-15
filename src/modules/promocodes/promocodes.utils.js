@@ -1,6 +1,11 @@
 import {getWeather} from "./promocodes.services";
 import AsyncAf from 'async-af';
 
+
+/**
+ * Constant that contains the different keys of possible restrictions.
+ * The goal is to try to have a generic algorithm to add more easily
+ */
 const TYPE_RESTRICTIONS = {
     'or': async (restrictions, params) => await orIsValidate(restrictions, params),
     'and': async (restrictions, params) => await restrictionsIsValid(restrictions, params),
@@ -9,6 +14,12 @@ const TYPE_RESTRICTIONS = {
     'meteo': async (restrictions, params) => await meteoValidator(restrictions, params),
 };
 
+/**
+ * Check if the params of request are valid (compare with restrictions of promocode)
+ * @param restrictions
+ * @param params
+ * @returns {Promise<Array>}
+ */
 export async function requestIsValid(restrictions, params) {
     return await restrictionsIsValid(restrictions, params);
 }
