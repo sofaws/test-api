@@ -6,6 +6,7 @@ chai.use(require('chai-http'));
 
 describe('Products', () => {
 
+
     describe('/create promocodes', () => {
         it('it should decline the request because restrictions array is not valid', (done) => {
             const request = {

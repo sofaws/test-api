@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken';
 import {ErrorResponse} from "../constants/response.constant";
 
 export default function isAuth(req, res, next) {
+    if(process.env.NODE_ENV === "test") return next();
+
     const header = req.headers['authorization'];
 
     if(typeof header !== 'undefined') {
@@ -10,8 +12,7 @@ export default function isAuth(req, res, next) {
 
         jwt.verify(token, 'fakeprivatekeyputtoenv', (err, authorizedData) => {
             if(err){
-                res.sendStatus(403);
-                res.status(403).send(ErrorResponse('Token isnot valid'));
+                return res.status(403).send(ErrorResponse('Token isnot valid'));
             } else {
                 next()
             }
