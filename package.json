@@ -23,7 +23,8 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "request-promise": "^4.2.4",
+    "mongodb-memory-server": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -36,7 +37,6 @@
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "cross-env": "^5.2.0",
-    "mocha": "^5.2.0",
-    "mongodb-memory-server": "^3.0.0"
+    "mocha": "^5.2.0"
   }
 }
