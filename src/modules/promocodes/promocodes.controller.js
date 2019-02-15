@@ -26,15 +26,15 @@ export default class PromoCodeController {
         const promoCode = req.body.promocode_name;
         const params = req.body.params;
         if(!promoCode) res.status(404).send(ErrorResponse('promocode_name params is required'));
-        PromoCodeModel.findOne({ name: promoCode})
-            .then(data => {
+        PromoCodeModel.findOne( { name: promoCode})
+            .then( async data => {
                 if (!data) return res.status(404).send(ErrorResponse('Promocode not found'));
 
-                const isValid = askIsValidate(data.restrictions, params);
-                if(isValid) {
+                const errors = await askIsValidate(data.restrictions, params);
+                if(errors.length === 0) {
                     res.status(200).send(ValidAskResponse(promoCode, data.avantage));
                 } else {
-                    res.status(403).send(NotValidAskResponse(promoCode, {}));
+                    res.status(403).send(NotValidAskResponse(promoCode, errors));
                 }
             })
             .catch(err => res.status(500).send(ErrorResponse(err)));
