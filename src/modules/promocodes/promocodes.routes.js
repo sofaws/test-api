@@ -5,6 +5,6 @@ const router = express.Router();
 
 
 router.post('/', PromoCodeController.create);
-router.post('/ask', PromoCodeController.ask);
+router.post('/request', PromoCodeController.request);
 
 export default router;

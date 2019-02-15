@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const AvantageSchema = new Schema({
-    percent: { type: String, required: true }
+    percent: { type: Number, required: true }
 });
 
 const PromoCodeSchema = new Schema({
